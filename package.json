@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-codice-linter",
+  "name": "@connexta/eslint-plugin",
   "version": "0.0.0",
   "description": "ESLint rules for Codice projects",
   "keywords": [
