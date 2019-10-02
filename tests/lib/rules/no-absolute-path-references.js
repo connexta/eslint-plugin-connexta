@@ -8,7 +8,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/no-absolute-urls')
+var rule = require('../../../lib/rules/no-absolute-path-references')
 
 var RuleTester = require('eslint').RuleTester
 
@@ -17,7 +17,7 @@ var RuleTester = require('eslint').RuleTester
 // ------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester()
-ruleTester.run('no-absolute-urls', rule, {
+ruleTester.run('no-absolute-path-references', rule, {
   valid: [
     { code: "url = 'services' + '/service'" },
     { code: "url = './services'" },
@@ -32,7 +32,7 @@ ruleTester.run('no-absolute-urls', rule, {
       code: "url = '/services'",
       errors: [
         {
-          message: 'Do not use absolute URLs',
+          message: 'Do not use absolute-path references',
           type: 'Literal',
         },
       ],
@@ -41,7 +41,7 @@ ruleTester.run('no-absolute-urls', rule, {
       code: "url = '/services' + '/service'",
       errors: [
         {
-          message: 'Do not concatenate absolute URLs',
+          message: 'Do not concatenate absolute-path references',
           type: 'Literal',
         },
       ],
