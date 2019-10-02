@@ -1,7 +1,7 @@
 {
   "name": "@connexta/eslint-plugin-connexta",
   "version": "0.0.0",
-  "description": "ESLint rules for Codice projects",
+  "description": "ESLint rules for Connexta projects",
   "keywords": [
     "eslint",
     "eslintplugin",
